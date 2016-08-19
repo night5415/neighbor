@@ -1,0 +1,42 @@
+.blur-background{
+  background-image: url('/img/gate.jpg'); 
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top:0;
+  z-index: -1;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.side-bar{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 10vw;
+    height: 100vh;  
+    color:rgb(233, 233, 233);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-bar .link{
+    font-size: 4em; 
+    text-align: center;
+    margin: 1em 0;
+    cursor: pointer;
+}
+
+.side-bar .background{
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%; 
+    position:absolute;
+    top: 0; 
+}

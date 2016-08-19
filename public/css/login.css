@@ -1,0 +1,12 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background: url("/img/GreenWood.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  box-shadow: #000000 0 0 420px inset; 
+  }
+
+form {
+  margin-top: 30vh; 
+  }

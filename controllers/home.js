@@ -5,31 +5,28 @@ router.use(function timeLog(req, res, next) {
     console.log('Home Controller: ', Date.now());
     next();
 });
-
-
-
-router.get('/variable', function (req, res, next) {
-    console.log('Home Controller: ', Date.now());
-    res.render('home/index', {
-        title: 'Basic Variable',
-        user: {
-            firstname: 'Manish',
-            lastname: 'Prakash',
-            email: 'manish@excellencetechnologies.in'
-        }
-    }
-    );
-});
-
-
-
+ 
 router.get('/', function (req, res) {
-    res.render('index');
+    res.render('home/index');
 });
 
 router.get('/about', function (req, res) {
     res.render('home/about');
 });
 
+router.get('/profile', function (req, res) {
+    res.render('home/profile');
+});
 
+router.get('/nolayout', function (req, res) {
+    res.render('home/index', {
+    layout: false
+});
+});
+ 
+ router.get('/profile/nolayout', function (req, res) {
+    res.render('home/profile', {
+    layout: false
+});
+});
 module.exports = router;
