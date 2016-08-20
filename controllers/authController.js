@@ -2,9 +2,9 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
- 
 
- // create application/json parser 
+
+// create application/json parser 
 var jsonParser = bodyParser.json();
 // create application/x-www-form-urlencoded parser 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -22,8 +22,7 @@ router.get('/about', function (req, res) {
 // POST /login gets urlencoded bodies 
 router.post('/login', jsonParser, function (req, res) {
   if (!req.body) return res.sendStatus(400)
-  res.send('welcome, ' + req.body.userName);
+    res.send('welcome, ' + req.body.userName);
 })
-
 
 module.exports = router;

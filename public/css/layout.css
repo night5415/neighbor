@@ -1,68 +1,96 @@
-body{
+body {
     padding-top: 90px;
-     color:#fff;
+    color: #fff;
 }
-h1{
-    color:#fff;
-}
-.page-header{
-    border:none;
-    padding:0;
-    margin:0;
-    margin-left: 15vw; 
-}
-.blur-background{
-  background-image: url('/img/gate.jpg'); 
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  height: 100%;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top:0;
-  z-index: -1;
 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+h1 {
+    color: #fff;
 }
-.side-bar{
+
+.page-header {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 15vw;
+}
+
+.blur-background {
+    background-image: url('/img/gate.jpg');
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    height: 100%;
+    left: 0;
     position: fixed;
-    top:0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.side-bar {
+    position: fixed;
+    top: 0;
     left: 0;
     width: 8vw;
-    height: 100vh;  
-    color:rgb(233, 233, 233);
+    height: 100vh;
+    color: rgb(233, 233, 233);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.side-bar .link{
-    font-size: 4em; 
+.side-bar .link {
+    font-size: 4em;
     text-align: center;
     margin: 1em 0;
     cursor: pointer;
 }
 
-.side-bar .background{
+.side-bar .background {
     background: rgba(0, 0, 0, 0.6);
     height: 100%;
-    width: 100%; 
-    position:absolute;
-    top: 0; 
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
-.error-message{
-    color:#fff;
+
+.error-message {
+    color: #fff;
     background: rgba(0, 0, 0, 0.6);
-    font-size:3em;
-    height:4em;
+    font-size: 3em;
+    height: 4em;
     width: 20em;
-    padding:1em;
-    overflow:hidden;
+    padding: 1em;
+    overflow: hidden;
     text-align: center;
     position: absolute;
-    top:calc(50% - 2em);
-    left:calc(50% - 10em);
+    top: calc(50% - 2em);
+    left: calc(50% - 10em);
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+    position: fixed;
+    top: calc(50vh - 60px);
+    left: calc(50vw - 60px);
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

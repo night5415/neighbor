@@ -6,31 +6,33 @@ router.use(function timeLog(req, res, next) {
     next();
 });
 
-router.get('/', function (req, res) {
+router.get('/', function (req, res) { 
     res.render('home/index');
 });
 
-router.get('/about', function (req, res) {
+router.get('/about', function (req, res) { 
     res.render('home/about');
 });
 
-router.get('/profile', function (req, res) {
+router.get('/profile', function (req, res) { 
     res.render('home/profile');
 });
 
-router.get('/nolayout', function (req, res) {
+router.get('/nolayout', function (req, res) { 
     res.render('home/index', {
         layout: false
     });
 });
 
-router.get('/profile/nolayout', function (req, res) {
+router.get('/profile/nolayout', function (req, res) { 
+    var start = new Date().getTime();
+    while (new Date().getTime() < start + 1000);
     res.render('home/profile', {
         layout: false
     });
 });
 
-router.get('/comment/nolayout', function (req, res) {
+router.get('/comment/nolayout', function (req, res) { 
     res.render('home/comment', {
         layout: false
     });

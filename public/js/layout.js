@@ -3,6 +3,12 @@ $(document).ready(function () {
     $('#btnUser').click(click.user);
     $('#btnComment').click(click.comment);
 });
+$(document).ajaxStart(function () {
+    $(".loader").show();
+});
+$(document).ajaxComplete(function () {
+    $(".loader").hide();
+});
 
 var click = {
     home: function () {
@@ -31,7 +37,11 @@ var ajax = {
                 , dataType: 'html'
             })
             .done(function (data) {
-                $('#dynamicContent').html(data);
+                var current = $('#dynamicContent');
+                current.fadeOut(300, function () {
+                    current.html(data).fadeIn(300);
+                });
+
             })
             .fail(function () {
                 var errorDiv = $('<div />', {
