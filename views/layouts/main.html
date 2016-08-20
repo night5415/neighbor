@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>Home page</title>
@@ -11,17 +12,23 @@
         <script src="js/layout.js" type="text/javascript"></script>
     </head>
     <body>
-     <div class="side-bar">
-         <div class="background"></div>
-         <div class="glyphicon glyphicon-home link" id="btnHome"></div>
-         <div class="glyphicon glyphicon-user link" id="btnUser"></div> 
-         <div class="glyphicon glyphicon-comment link" id="btnComment"></div>
-         <div class="glyphicon glyphicon-picture link" id="btnPicture"></div>
-         <div class="glyphicon glyphicon-cog link" id="btnSettings"></div>
-     </div>
-     <div id="dynamicContent">
-          {{{body}}}
-     </div> 
+        <div class="side-bar">
+            <div class="background"></div>
+            <div class="glyphicon glyphicon-home link" id="btnHome"></div>
+            <div class="glyphicon glyphicon-user link" id="btnUser"></div>
+            <div class="glyphicon glyphicon-comment link" id="btnComment"></div>
+            <div class="glyphicon glyphicon-picture link" id="btnPicture"></div>
+            <div class="glyphicon glyphicon-cog link" id="btnSettings"></div>
+        </div>
+        <div class="container">
+            <div class="page-header navbar-fixed-top">
+                <h1>Bur Oak Estates</h1>
+            </div>
+            <div id="dynamicContent">
+                {{{body}}}
+            </div>
+        </div>
+
+        <div class="blur-background"></div>
     </body>
-    <div class="blur-background"></div>
 </html>

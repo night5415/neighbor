@@ -4,9 +4,16 @@ body {
   background: url("/img/GreenWood.jpg");
   background-repeat: no-repeat;
   background-size: auto;
-  box-shadow: #000000 0 0 420px inset; 
-  }
+  box-shadow: #000000 0 0 420px inset;
+}
 
 form {
-  margin-top: 30vh; 
-  }
+  margin-top: 30vh;
+}
+
+.login-form {
+  padding: 75px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #FFF !important;
+  width: 25vw;
+}
