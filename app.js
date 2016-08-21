@@ -38,7 +38,8 @@ app.use('/auth', auth);
 app.use(express.static(__dirname + '/public'));
  
 //starts our server on port 3000
-app.listen(3000, function () {
+var port = process.env.port || 3000;
+app.listen(port, function () {
   console.log('app listening on port 3000!');
 });
 
