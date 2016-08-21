@@ -24,9 +24,7 @@ router.get('/nolayout', function (req, res) {
     });
 });
 
-router.get('/profile/nolayout', function (req, res) { 
-    var start = new Date().getTime();
-    while (new Date().getTime() < start + 1000);
+router.get('/profile/nolayout', function (req, res) {  
     res.render('home/profile', {
         layout: false
     });
@@ -37,4 +35,9 @@ router.get('/comment/nolayout', function (req, res) {
         layout: false
     });
 });
+
+function sleep(time) {
+      var start = new Date().getTime();
+    while (new Date().getTime() < start + time);
+}
 module.exports = router;
