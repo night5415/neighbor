@@ -1,8 +1,12 @@
 var express = require('express');
-var exphbs = require('express-handlebars'); 
+var exphbs = require('express-handlebars');
 
 var app = express();
-  
+app.set('port', (process.env.PORT || 5000));
+
+//this points to the public folder where img, js and css files will be
+app.use(express.static(__dirname + '/public')); 
+
 // Create `ExpressHandlebars` instance with a default layout.
 handlebars = exphbs.create({
   defaultLayout: 'main',
@@ -19,7 +23,7 @@ handlebars = exphbs.create({
 // Set html in app.engine and app.set so express knows what extension to look for.
 app.engine('html', handlebars.engine);
 app.set('view engine', 'html');
- 
+
 //site entry point to the index page in views/root!
 app.get('/', function (req, res) {
   res.render('index', { layout: false });
@@ -32,14 +36,11 @@ var auth = require(__dirname + '/controllers/authController');
 //sets up the controllers
 app.use('/home', home);
 app.use('/comment', comment);
-app.use('/auth', auth); 
-
-//this points to the public folder where img, js and css files will be
-app.use(express.static(__dirname + '/public'));
+app.use('/auth', auth);
  
 //starts our server on port 5000 
-app.listen(process.env.PORT || 5000, function () {
-  console.log('app listening on port' + port);
+app.listen(app.get('port'), function () {
+  console.log('Node app is running on port', app.get('port'));
 });
 
 
