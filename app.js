@@ -37,9 +37,8 @@ app.use('/auth', auth);
 //this points to the public folder where img, js and css files will be
 app.use(express.static(__dirname + '/public'));
  
-//starts our server on port 3000
-var port = process.env.port || 3000;
-app.listen(port, function () {
+//starts our server on port 5000 
+app.listen(process.env.PORT || 5000, function () {
   console.log('app listening on port' + port);
 });
 
